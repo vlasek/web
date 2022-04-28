@@ -1,0 +1,23 @@
+html
+{
+    background-color: rgb(245, 229, 220);
+}
+img
+{
+width: 20%;
+height: 20%;
+}
+
+h1, h2
+{
+    color: bisque;
+}
+h3, h4
+{
+    color: blue;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
