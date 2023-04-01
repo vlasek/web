@@ -1,0 +1,67 @@
+body{
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.link {
+    color: cornflowerblue;
+    font-size: 16px;
+    line-height: 20px;
+    column-width: 50px;
+}
+
+.tittle {
+    color: #222222;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+
+}
+
+.paragraph {
+font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7D7987;
+}
+
+.smallTittle {
+    color: coral;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
+}
+
+.btn {
+    border: 1px solid #222222;
+    border-radius: 10px;
+    outline: none;
+    width: 150px;
+    height: 30px;
+    background-color: lightslategrey;
+    color: lightcyan;
+
+}
+
+.inputForm {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #222222;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.inputForm::placeholder {
+    color: lightgrey;}
+
+.pics {
+    border-radius: 10px 75px 10px;
+    height: 400px;
+}
