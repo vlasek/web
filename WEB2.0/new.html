@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="catalog.html">переход</a>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum ab earum provident voluptatibus, velit repellendus deserunt consequuntur nihil assumenda rem autem doloremque dicta tempora alias recusandae reprehenderit labore ducimus. Quia maiores aspernatur et. Non quam dolorem rerum quo consectetur ratione magni iste tempore doloribus repellat, vitae, voluptas dolor minima ad? Reprehenderit architecto, quo id perspiciatis repudiandae in distinctio? Reprehenderit nemo tempora porro quis, iure corrupti veniam aut fugiat, laborum corporis amet. Aspernatur tempora eligendi quod? Pariatur corrupti dignissimos nobis animi explicabo dolores hic et maxime! Rem nesciunt culpa omnis blanditiis. Molestiae, ea perferendis amet assumenda ad corporis minima, obcaecati ipsam nobis nulla totam recusandae id cum! Provident temporibus quis vel. Libero dignissimos repudiandae illo similique possimus quis minus vitae accusantium laudantium incidunt. Ex tempora dolore sunt dicta voluptates esse veritatis nulla vel possimus ipsa laudantium vero maiores, commodi eum minima facere quam odio, quo tenetur velit eligendi aperiam omnis cumque? Molestiae vel deleniti exercitationem, veniam quisquam nobis consectetur. Ratione at veritatis pariatur, a earum provident alias? Excepturi, debitis tenetur distinctio illum repellendus quae reprehenderit sed expedita similique earum dolor cumque. Doloribus neque magnam iste eos laborum architecto repellendus minima dolores laboriosam iure repudiandae alias libero quibusdam nulla, tempore culpa.
+
+    
+    <?php
+//проверяем, существуют ли переменные в массиве POST
+if(!isset($_POST['fio']) and !isset($_POST['email'])){
+ ?> <form action="send.php" method="post">
+<input type="text" name="fio" placeholder="Укажите ФИО" required>
+<input type="text" name="email" placeholder="Укажите e-mail" required>
+<input type="submit" value="Отправить">
+</form> 
+
+<?php
+} else {
+ //показываем форму
+ $fio = $_POST['fio'];
+ $email = $_POST['email'];
+ $fio = htmlspecialchars($fio);
+ $email = htmlspecialchars($email);
+ $fio = urldecode($fio);
+ $email = urldecode($email);
+ $fio = trim($fio);
+ $email = trim($email);
+ if (mail("example@mail.ru", "Заявка с сайта", "ФИО:".$fio.". E-mail: ".$email ,"From: example2@mail.ru \r\n")){ 
+ echo "Сообщение успешно отправлено"; 
+ } else { 
+ echo "При отправке сообщения возникли ошибки";
+ }
+}
+?>
+
+</body>
+</html>
