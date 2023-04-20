@@ -227,15 +227,14 @@ main {
 
 .card3 {
   display: flex;
-  background: #0f0;
+  background: #fafafa;
 }
 .card_3 {
-  /* background: #ffff00; */
+  background: #fafafa;
 }
 
 .part_two {
-  padding: 0 30px 50px 30px;
-  /* background: #00f; */
+  /* padding: 0 30px 50px 30px; */
 }
 .h3_3rd {
   font-family: "Gilroy-Bold";
